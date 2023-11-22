@@ -6,15 +6,16 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import Card from 'react-bootstrap/Card';
-
-
+import CardGroup from 'react-bootstrap/CardGroup';
+// import img6.jpeg from './img6.jpeg';
 
 
 function App() {
   return (
-    <div className="App">
-       <Navbar expand="lg" className="bg-body-tertiary">
+    <div className="App"> 
+      <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -54,34 +55,50 @@ function App() {
     </Navbar>
 
 
-
-    {[
-        'Primary',
-        'Secondary',
-        'Success',
-        'Danger',
-        'Warning',
-        'Info',
-        'Light',
-        'Dark',
-      ].map((variant) => (
-        <Card
-          bg={variant.toLowerCase()}
-          key={variant}
-          text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-          style={{ width: '18rem' }}
-          className="mb-2"
-        >
-          <Card.Header>Header</Card.Header>
-          <Card.Body>
-            <Card.Title>{variant} Card Title </Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
+    <h1> my Product</h1>
+    
+    <CardGroup>
+      <Card>
+        {/* <Card.Img variant="top" src="img6.jpeg"/> */}
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This card has supporting text below as a natural lead-in to
+            additional content.{' '}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+    </CardGroup>
     </div>
   );
 }
